@@ -8,16 +8,17 @@
     <title>GameHelper | 6 qui prend</title>
 </head>
     <body>
-        <div id="truc">
-            <button id="home" onclick="window.open('../../index.html', '_self')">Retour</button>
-            <p></p>
+        <button id="home" onclick="window.open('../../index.html', '_self')">Retour</button>
+        <p></p>
+        <div id="players">
             <input id="player1" placeholder="Nom du joueur 1">
             <input id="player2" placeholder="Nom du joueur 2">
             <input id="addPlayer" placeholder="Nouveau joueur" onclick="addPlayer()">
             <p id="beforePlayers"></p>
-            <button id="start" onclick="doSomething()">Démarer la partie</button>
+            <button id="start" onclick="startGame()">Démarer la partie</button>
         </div>
     </body>
 </html>
 <script src="playersManager.js"></script>
 <script src="mousemoving.js"></script>
+<script src="game.js"></script>

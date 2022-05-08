@@ -5,3 +5,17 @@ input {
     height: 15px;
     transition: 0.5s cubic-bezier(.28,0,.6,.99);
 }
+table,
+td {
+    border: 1px solid;
+    text-align: center;
+    width: 350px;
+    height: 25px;
+}
+.scoreTD {
+    width: 50px;
+    border: 0;
+}
+#firstColumn {
+    width: 100px;
+}
