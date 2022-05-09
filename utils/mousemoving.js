@@ -16,15 +16,21 @@ addPlayerInput.addEventListener('mousemove', function(){bigInput(addPlayerInput)
 
 window.addEventListener("mousemove", e => {
     try {
-        if (e.target.tagName === "HTML" || e.target.tagName === "BODY" || e.target.tagName === "DIV"){
+        if (e.target.tagName != "INPUT"){
             for (j = 1; j <= nbPlayers; j++) {
                 const player = document.getElementById("player" + j).style;
-                player.width = "100px";
-                player.height = "15px";
+                player.width = "125px";
+                player.height = "20px";
             }
             const addPlayerInput = document.getElementById("addPlayer").style;
-            addPlayerInput.width = "100px";
-            addPlayerInput.height = "15px";
+            addPlayerInput.width = "125px";
+            addPlayerInput.height = "20px";
+            const inputs = document.getElementsByTagName("input");
+            for (i = 0; i < inputs.length; i++) {
+                const input = inputs[i].style;
+                addPlayerInput.width = "125px";
+                addPlayerInput.height = "20px";
+            }
         }
     } catch(TypeError) {}
 });
