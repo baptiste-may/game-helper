@@ -1,13 +1,17 @@
+body {
+    background-image: url('https://lagranderecre-lagranderecre-fr-storage.omn.proximis.com/Imagestorage/images/0/0/5d4c1cf2c74a3_GIGAMIC_AMSIXQ_SIX_QUI_PREND_BOX_RIGHT.jpg');
+    width: auto;
+    height: auto;
+    background-size: 125%;
+    background-position: 45% 0%;
+}
 input {
-    border: 1px solid rgb(127, 127, 127);
-    text-align: center;
-    width: 125px;
-    height: 20px;
-    transition: 0.25s cubic-bezier(.28,0,.6,.99);
+    background-color: rgb(255, 255, 255, 0);
 }
 table,
 td {
-    border: 1px solid;
+    background-color: rgb(255, 255, 255, .5);
+    border: 2px solid rgb(200, 200, 0);
     text-align: center;
     width: 350px;
     height: 25px;
@@ -19,4 +23,8 @@ td {
 #firstColumn {
     width: 100px;
     font-weight: bold;
+}
+.shift {
+    transition: 0.5s cubic-bezier(.28,0,.6,.99);
+    margin: 2% 1%;
 }

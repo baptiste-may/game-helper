@@ -2,7 +2,11 @@
 var players = [];
 var nbGame = 1;
 
-function startGame() {
+document.getElementById("start").onclick = function() {
+
+document.getElementById("players").style.opacity = 0;
+
+setTimeout(() => {
 
 for (i = 1; i <= nbPlayers; i++) {
     players.push(66);
@@ -48,14 +52,21 @@ for (i = 1; i <= players.length; i++) {
 
 table.appendChild(firstGame);
 
-document.body.appendChild(table);
+document.getElementById("game").appendChild(table);
 
-const button = document.createElement("button");
+const button = document.createElement("a");
 button.textContent = "Prochaine manche";
+button.className = "next_button";
 button.id = "next";
 button.onclick = function(){next()};
-document.body.appendChild(document.createElement("p"));
-document.body.appendChild(button);
+document.getElementById("game").appendChild(document.createElement("p"));
+document.getElementById("game").appendChild(button);
+
+document.getElementById("game").style.opacity = 1;
+
+}, 750);
+
+return false;
 
 }
 
@@ -63,9 +74,8 @@ function next() {
 
 for (i = 1; i <= nbPlayers; i++) {
     const value = document.getElementById("player" + i + "_game" + nbGame).value;
-    if (value == "") {
-        return;
-    } else if (isNaN(parseInt(value))) {
+    if (value == "" || isNaN(parseInt(value))) {
+        alert("Mauvaises informations entrées")
         return;
     }
     players[i-1] -= parseInt(value);

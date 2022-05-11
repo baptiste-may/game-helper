@@ -5,20 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../utils/buttonStyle.css">
+    <style>
+        :root {
+            --bg-color1-R: 200;
+            --bg-color1-G: 0;
+            --bg-color1-B: 0;
+
+            --bg-color2-R: 200;
+            --bg-color2-G: 200;
+            --bg-color2-B: 0;
+        }
+    </style>
     <title>GameHelper | 6 qui prend</title>
 </head>
     <body>
-        <button id="home" onclick="window.open('https://djredstone.github.io/game-helper/', '_self')">Retour</button>
-        <p></p>
-        <div id="players">
-            <input id="player1" placeholder="Nom du joueur 1">
-            <input id="player2" placeholder="Nom du joueur 2">
-            <input id="addPlayer" placeholder="Nouveau joueur" onclick="addPlayer()">
-            <p id="beforePlayers"></p>
-            <button id="start" onclick="startGame()">Démarer la partie</button>
+        <div>
+            <a href="https://djredstone.github.io/game-helper/" class="home_button">Retour</a>
+        </div>
+        <div id="background">
+            <div id="players" class="shift">
+                <input class="player_input" id="player1" placeholder="Nom du joueur 1">
+                <input class="player_input" id="player2" placeholder="Nom du joueur 2">
+                <input class="player_input" id="addPlayer" placeholder="Nouveau joueur" onfocus="addPlayer()">
+                <p id="beforePlayers"></p>
+                <a class="start_button" id="start">Démarer la partie</a>
+            </div>
+            <div href="https://djredstone.github.io/game-helper/" style="opacity: 0;" id="game" class="shift"></div>
         </div>
     </body>
 </html>
 <script src="../../utils/playersManager.js"></script>
-<script src="../../utils/mousemoving.js"></script>
 <script src="game.js"></script>
