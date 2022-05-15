@@ -1,3 +1,57 @@
 body {
-    font-size: 48px;
+    background-image: url("utils/main\ bg.jpg");
+    width: 99%;
+    height: 100%;
+}
+.header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.5) 75%, rgb(100, 100, 100, 0));
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
+.logo {
+    margin-left: 2%;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+}
+.headerText {
+    margin-left: 35%;
+    margin-right: auto;
+    margin-top: 12%;
+    margin-bottom: auto;
+    color: white;
+    font-family: Fredoka One;
+    font-size: 190%;
+}
+#topMessage {
+    margin-top: 15%;
+    font-size: 300%;
+    font-family: Fredoka One;
+    text-align: center;
+    color: white;
+    text-decoration: underline;
+}
+.grid {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+div.grid div {
+    display: flex;
+    align-items: center;
+}
+.gamesCover {
+    width: 100%;
+    height: auto;
+    transform: scale(.8);
+    transition: 0.5s all ease;
+}
+.gamesCover:hover {
+    transform: scale(.9);
 }
