@@ -1,28 +1,6 @@
-.tooBigWidth {
-    position: fixed;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(255, 255, 255, 0.5);
-    backdrop-filter: blur(50px);
-    z-index: 15;
-    font-size: 500%;
-    color: darkslategray;
-    font-family: Fredoka One;
-    text-align: center;
-    padding: 25% 0;
-    transition: all 0.5s ease;
-}
-@media (max-width: 1280px) {
-    .tooBigWidth {
-        opacity: 0;
-        z-index: -1;
-    }
-}
 body {
-    background-image: url("utils/main\ bg.jpg");
+    background: url("utils/main\ bg.jpg") center center fixed;
+    background-size: cover;
     width: 99%;
     height: 100%;
 }
@@ -39,35 +17,52 @@ body {
 .logo {
     margin-left: 2%;
     margin-right: auto;
-    width: 30%;
+    max-width: 200px;
     height: auto;
 }
 .headerText {
-    margin-left: 35%;
+    margin-left: 275px;
     margin-right: auto;
-    margin-top: 12%;
+    margin-top: 4%;
     margin-bottom: auto;
     color: white;
     font-family: Fredoka One;
-    font-size: 190%;
+    font-size: 300%;
 }
 #topMessage {
-    margin-top: 15%;
+    margin-top: 10%;
     font-size: 300%;
     font-family: Fredoka One;
     text-align: center;
     color: white;
     text-decoration: underline;
 }
+.searchBar {
+    border: 2px solid white;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 0.5% 1%;
+    font-size: 200%;
+    font-family: Fredoka One;
+    text-align: center;
+    color: white;
+    width: 25%;
+    display: flex;
+    margin-top: 1%;
+    margin-left: auto;
+    margin-right: auto;
+}
 .grid {
-    width: 100%;
-    height: auto;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 div.grid div {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .gamesCover {
     width: 100%;
@@ -77,4 +72,17 @@ div.grid div {
 }
 .gamesCover:hover {
     transform: scale(.9);
+}
+.gameTitle {
+    position: absolute;
+    border: 2px solid white;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 25px;
+    padding: 1% 2%;
+    margin-top: 15%;
+    font-size: 150%;
+    font-family: Fredoka One;
+    text-align: center;
+    color: white;
+    pointer-events: none;
 }
