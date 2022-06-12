@@ -1,36 +1,5 @@
-body {
-    background: url("utils/main\ bg.jpg") center center fixed;
-    background-size: cover;
-    width: 99%;
-    height: 100%;
-}
-.header {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    background: linear-gradient(rgb(0, 0, 0, 0.75), rgb(0, 0, 0, 0.5) 75%, rgb(100, 100, 100, 0));
-    width: 100%;
-    height: auto;
-    z-index: -1;
-}
-.logo {
-    margin-left: 2%;
-    margin-right: auto;
-    max-width: 200px;
-    height: auto;
-}
-.headerText {
-    margin-left: 275px;
-    margin-right: auto;
-    margin-top: 4%;
-    margin-bottom: auto;
-    color: white;
-    font-family: Fredoka One;
-    font-size: 300%;
-}
 #topMessage {
-    margin-top: 10%;
+    margin-top: 20%;
     font-size: 300%;
     font-family: Fredoka One;
     text-align: center;
@@ -77,6 +46,7 @@ div.grid div {
     position: absolute;
     border: 2px solid white;
     background-color: rgb(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 1% 2%;
     margin-top: 15%;
