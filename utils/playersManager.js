@@ -25,6 +25,7 @@ function removePlayer(nb) {
     const element = document.getElementById("player" + nb);
     if (element.value.length == 0) {
         nbPlayers--;
+        document.getElementById("addPlayer").style.transform = "translateY(-50px)";
         document.getElementById("addPlayer").style.opacity = 0;
         setTimeout(() => {
             document.getElementById("addPlayer").remove();

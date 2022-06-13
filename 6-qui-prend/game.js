@@ -18,8 +18,9 @@ table.id = "table";
 const playersTR = document.createElement("tr");
 
 const firstTD = document.createElement("td");
-firstTD.textContent = "Parties";
+firstTD.textContent = "";
 firstTD.id = "firstColumn";
+firstTD.style.opacity = 0;
 playersTR.appendChild(firstTD);
 
 for (i = 1; i <= players.length; i++) {
@@ -58,6 +59,7 @@ const button = document.createElement("a");
 button.textContent = "Prochaine manche";
 button.className = "next_button";
 button.id = "next";
+button.href = "#";
 button.onclick = function(){next()};
 document.getElementById("game").appendChild(document.createElement("p"));
 document.getElementById("game").appendChild(button);
@@ -65,8 +67,6 @@ document.getElementById("game").appendChild(button);
 document.getElementById("game").style.opacity = 1;
 
 }, 750);
-
-return false;
 
 }
 

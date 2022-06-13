@@ -1,25 +1,9 @@
 #topMessage {
-    margin-top: 20%;
     font-size: 300%;
     font-family: Fredoka One;
     text-align: center;
     color: white;
     text-decoration: underline;
-}
-.searchBar {
-    border: 2px solid white;
-    background-color: rgb(255, 255, 255, 0.4);
-    border-radius: 25px;
-    padding: 0.5% 1%;
-    font-size: 200%;
-    font-family: Fredoka One;
-    text-align: center;
-    color: white;
-    width: 25%;
-    display: flex;
-    margin-top: 1%;
-    margin-left: auto;
-    margin-right: auto;
 }
 .grid {
     max-width: 1000px;
@@ -28,7 +12,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-div.grid div {
+.grid div {
     display: flex;
     align-items: center;
     justify-content: center;

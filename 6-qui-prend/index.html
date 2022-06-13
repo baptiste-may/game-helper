@@ -22,19 +22,21 @@
     <title>GameHelper | 6 qui prend</title>
 </head>
     <body>
-        <div>
-            <a href="https://djredstone.github.io/game-helper/" class="home_button">Retour</a>
+        <div class="header">
+            <img class="header-logo" src="../utils/logo.png">
+            <div class="header-text">De l'aide pour vos parties de jeux de société</div>
         </div>
-        <div id="background">
-            <div id="players" class="shift">
-                <input class="player_input" id="player1" placeholder="Nom du joueur 1">
-                <input class="player_input" id="player2" placeholder="Nom du joueur 2">
-                <input class="player_input" id="addPlayer" placeholder="Nouveau joueur" onfocus="addPlayer()">
-                <p id="beforePlayers"></p>
-                <a class="start_button" id="start">Démarer la partie</a>
-            </div>
-            <div href="https://djredstone.github.io/game-helper/" style="opacity: 0;" id="game" class="shift"></div>
+        <div onclick="window.location.href = 'https://djredstone.github.io/game-helper/'" style="width: 100%; height: 200px;"></div>
+        <h1>6 qui prend</h1>
+        <br>
+        <div id="players" class="shift">
+            <input class="player_input" id="player1" placeholder="Nom du joueur 1">
+            <input class="player_input" id="player2" placeholder="Nom du joueur 2">
+            <input class="player_input" id="addPlayer" placeholder="Nouveau joueur" onfocus="addPlayer()">
+            <p id="beforePlayers"></p>
+            <a href="#" class="next_button" id="start">Démarer la partie</a>
         </div>
+        <div href="#" style="opacity: 0;" id="game" class="game"></div>
     </body>
 </html>
 <script src="../utils/playersManager.js"></script>

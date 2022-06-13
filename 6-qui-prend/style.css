@@ -5,20 +5,12 @@ body {
     background-size: 125%;
     background-position: 45% 0%;
 }
-input {
-    background-color: rgb(255, 255, 255, 0);
-}
-table,
-td {
-    background-color: rgb(255, 255, 255, .5);
-    border: 2px solid rgb(200, 200, 0);
-    text-align: center;
-    width: 350px;
-    height: 25px;
-}
-.scoreTD {
-    width: 50px;
-    border: 0;
+td input {
+    color: white;
+	font-family: Fredoka One;
+    background-color: rgb(var(--bg-color1-R), var(--bg-color1-G), var(--bg-color1-B), .4);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
 }
 #firstColumn {
     width: 100px;
@@ -26,5 +18,47 @@ td {
 }
 .shift {
     transition: 0.5s cubic-bezier(.28,0,.6,.99);
-    margin: 2% 1%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+.game {
+    transition: 0.5s cubic-bezier(.28,0,.6,.99);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game table {
+    display: table;
+    table-layout: auto;
+    width: 100%;
+}
+.game td {
+    display: table-cell;
+    width: 300px;
+    color: white;
+	font-family: Fredoka One;
+    font-size: 250%;
+    text-align: center;
+    background-color: rgb(var(--bg-color1-R), var(--bg-color1-G), var(--bg-color1-B), .4);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(var(--bg-color1-R), var(--bg-color1-G), var(--bg-color1-B));
+    border-radius: 10px;
+    border-spacing: 100px;
+    padding: 1% 0;
+}
+.scoreTD {
+    text-align: center;
+    border: 0;
+    width: 100%;
+	max-width: 900px;
+	padding: 2% 0;
+    background: none;
+    font-size: 200%;
+}
+.scoreTD::placeholder {
+    color: rgb(200, 200, 200);
 }
