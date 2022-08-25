@@ -11,4 +11,4 @@
 📝 = Noté
 
 - ✅ - 6 qui prend
-- 📝 - Loup Garou de Thiercelieux
+- 🚧 - Loup Garou de Thiercelieux

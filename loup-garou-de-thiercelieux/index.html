@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../utils/logo-clean.png"/>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../utils/globalStyle.css">
+    <style>
+        :root {
+            --bg-color1-R: 190;
+            --bg-color1-G: 40;
+            --bg-color1-B: 40;
+
+            --bg-color2-R: 20;
+            --bg-color2-G: 20;
+            --bg-color2-B: 20;
+        }
+    </style>
+    <title>GameHelper | Loup garou de thiercelieux</title>
+</head>
+    <body>
+        <div class="header">
+            <img class="header-logo" src="../utils/logo.png">
+            <div class="header-text">De l'aide pour vos parties de jeux de société</div>
+        </div>
+        <div onclick="window.location.href = 'https://djredstone.github.io/game-helper/'" style="width: 100%; height: 200px;"></div>
+        <h1>Loup garou de thiercelieux</h1>
+        <br>
+        <div id="players" class="manager">
+            <input class="player_input" id="player1" placeholder="Nom du joueur 1">
+            <input class="player_input" id="player2" placeholder="Nom du joueur 2">
+            <input class="player_input" id="addPlayer" placeholder="Nouveau joueur" onfocus="addPlayer()">
+            <p id="beforePlayers"></p>
+            <a href="#" class="next_button" id="roles">Gérer les rôles</a>
+        </div>
+        <div style="opacity: 0;" class="manager" id="roles">
+            <p id="roles-text">Rôles à distribués : 0</p>
+            <div class="role" id="role-lg">
+                <img src="https://www.loups-garous-en-ligne.com/jeu/assets/images/carte2.png" class="role-img">
+                <label class="role-label" id="role-label-lg">Loup Garou (0)</label>
+                <input class="role-add" onclick="addRole('lg')" type="button" value="+">
+                <input class="role-remove" onclick="removeRole('lg')" type="button" value="-">
+            </div>
+            <div class="role" id="role-vil">
+                <img src="https://www.loups-garous-en-ligne.com/jeu/assets/images/carte18.png" class="role-img">
+                <label class="role-label" id="role-label-vill">Villageois (0)</label>
+                <input class="role-add" onclick="addRole('vill')" type="button" value="+">
+                <input class="role-remove" onclick="removeRole('vill')" type="button" value="-">
+            </div>
+            <a href="#" class="next_button" id="start">Démarer la partie</a>
+        </div>
+        <div style="opacity: 0;" class="manager" id="game"></div>
+        <footer>
+            <p>© 2022 Copyright - MAY Baptiste - Host on <a href="https://github.com">GitHub</a></p>
+            <style>
+                footer {
+                    position: absolute;
+                    display: grid;
+                    justify-items: center;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 50px;
+                    background-color: burlywood;
+                    font-family: Fredoka One;
+                    color: white;
+                }
+                footer a { color: cornsilk; }
+            </style>
+        </footer>
+    </body>
+</html>
+<script src="../utils/playersManager.js"></script>
+<script src="game.js"></script>
