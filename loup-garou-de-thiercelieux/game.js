@@ -32,6 +32,7 @@ function addRole(id) {
     document.getElementById("roles-text").textContent = "Rôles à distribués : " + rolesToSet;
     compo[id]++;
     document.getElementById("role-label-" + id).textContent = `${names[id]} (${compo[id]})`;
+    updateStartButton();
 }
 
 function removeRole(id) {
@@ -40,6 +41,14 @@ function removeRole(id) {
     document.getElementById("roles-text").textContent = "Rôles à distribués : " + rolesToSet;
     compo[id]--;
     document.getElementById("role-label-" + id).textContent = `${names[id]} (${compo[id]})`;
+    updateStartButton();
+}
+
+function updateStartButton() {
+    if (rolesToSet == 0)
+        document.getElementById("start").style.opacity = 1;
+    else
+        document.getElementById("start").style.opacity = 0;
 }
 
 // ----------{ START }----------
